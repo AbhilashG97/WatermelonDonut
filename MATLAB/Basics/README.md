@@ -59,3 +59,64 @@ The matrix operators and array operators are differentiated by the period (```.`
 
 Concatenate function : ```cat(dim, A1, A2, ...)``` 
 It can also be used to create multi-dimensional arrays.
+
+## String Operations
+
+We can combine strings vertically in either of the following ways −
+
+1. Using the ```MATLAB``` concatenation operator ```[]``` and separating each row with a semicolon (;). **Please note that in this method each row must contain the same number of characters**. For strings with different lengths, you should pad with space characters as needed.
+
+1. Using the ```char``` function. If the strings are of different lengths, char pads the shorter strings with trailing blanks so that each row has the same number of characters.
+
+### MATLAB Functions
+
+## Simple Function
+
+A function is a group of statements that together perform a task. In MATLAB, functions are defined in separate files. The name of the file and of the function should be the same.
+
+Functions operate on variables within their own workspace, which is also called the local workspace, separate from the workspace you access at the MATLAB command prompt which is called the base workspace.
+
+Functions can accept more than one input arguments and may return more than one output arguments.
+
+```function [out1,out2, ..., outN] = myfun(in1,in2,in3, ..., inN)```
+
+## Anonymous Functions
+
+An anonymous function is like an inline function in traditional programming languages, defined within a single ```MATLAB``` statement. It consists of a single ```MATLAB``` expression and any number of input and output arguments.
+
+```f = @(arglist)expression```
+
+## Primary and Sub-Functions
+
+Each function file contains a required primary function that appears first and any number of optional sub-functions that comes after the primary function and used by it.
+
+Primary functions can be called from outside of the file that defines them, either from command line or from other functions, but sub-functions cannot be called from command line or other functions, outside the function file.
+
+Sub-functions are visible only to the primary function and other sub-functions within the function file that defines them.
+
+## Nested Functions
+
+Nested functions are defined within the scope of another function and they share access to the containing function's workspace.
+
+``` Matlab
+function x = A(p1, p2)
+...
+B(p2)
+   function y = B(p3)
+   ...
+   end
+...
+end
+```
+
+## Private Functions
+
+If we do not want to expose the implementation of a function(s), we can create them as private functions.
+Private functions reside in subfolders with the special name private.
+They are visible only to functions in the parent folder.
+
+**NOTE:** For this we have to create a special folder in the current working by the name of private.
+
+## Global Variables
+
+Global variables can be shared by more than one function. For this, we need to declare the variable as global in all the functions.
