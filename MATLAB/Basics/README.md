@@ -68,9 +68,11 @@ We can combine strings vertically in either of the following ways −
 
 1. Using the ```char``` function. If the strings are of different lengths, char pads the shorter strings with trailing blanks so that each row has the same number of characters.
 
-### MATLAB Functions
+## MATLAB Functions
 
-## Simple Function
+```help function_name``` can be used to get more information on a function.
+
+### Simple Function
 
 A function is a group of statements that together perform a task. In MATLAB, functions are defined in separate files. The name of the file and of the function should be the same.
 
@@ -80,13 +82,13 @@ Functions can accept more than one input arguments and may return more than one 
 
 ```function [out1,out2, ..., outN] = myfun(in1,in2,in3, ..., inN)```
 
-## Anonymous Functions
+### Anonymous Functions
 
 An anonymous function is like an inline function in traditional programming languages, defined within a single ```MATLAB``` statement. It consists of a single ```MATLAB``` expression and any number of input and output arguments.
 
 ```f = @(arglist)expression```
 
-## Primary and Sub-Functions
+### Primary and Sub-Functions
 
 Each function file contains a required primary function that appears first and any number of optional sub-functions that comes after the primary function and used by it.
 
@@ -94,7 +96,7 @@ Primary functions can be called from outside of the file that defines them, eith
 
 Sub-functions are visible only to the primary function and other sub-functions within the function file that defines them.
 
-## Nested Functions
+### Nested Functions
 
 Nested functions are defined within the scope of another function and they share access to the containing function's workspace.
 
@@ -109,14 +111,20 @@ B(p2)
 end
 ```
 
-## Private Functions
+### Private Functions
 
 If we do not want to expose the implementation of a function(s), we can create them as private functions.
-Private functions reside in subfolders with the special name private.
+Private functions reside in sub-folders with the special name private.
 They are visible only to functions in the parent folder.
 
 **NOTE:** For this we have to create a special folder in the current working by the name of private.
 
-## Global Variables
+### Global Variables
 
-Global variables can be shared by more than one function. For this, we need to declare the variable as global in all the functions.
+Global variables can be shared by more than one function. For this, we need to declare the variable as ```global`` in all the functions.
+
+e.g ```global variable_name```
+
+## Importing Data
+
+The ```importdata``` function allows loading various data files of different formats.
