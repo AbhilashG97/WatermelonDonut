@@ -1,0 +1,297 @@
+@charset "utf-8";
+/* version no. [v.2018.09.25.01.xml_tables.css] 09:58 AM Responsive */
+/* version no. [v.2018.09.09.03.xml_tables.css] 05:30 PM algorithm td */
+/* version no. [v.2018.01.16.03.xml_tables.css] 03:30 PM fixed-width sidewaystable & max caption/footnote */
+
+@font-face {
+	font-family: 'xitstextsf';
+	src: url('/fonts/xitstextsf.eot');
+	src: url('/fonts/xitstextsf.eot?#iefix') format('embedded-opentype'), url('/fonts/xitstextsf.woff') format('woff'), url('/fonts/xitstextsf.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'xitstexttt';
+	src: url('/fonts/xitstexttt.eot');
+	src: url('/fonts/xitstexttt.eot?#iefix') format('embedded-opentype'), url('/fonts/xitstexttt.woff') format('woff'), url('/fonts/xitstexttt.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'xitstextttbf';
+  src: url('/fonts/xitstextttbf.eot');
+  src: url('/fonts/xitstextttbf.eot?#iefix') format('embedded-opentype'), url('/fonts/xitstextttbf.woff') format('woff'), url('/fonts/xitstextttbf.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'xitstexttt';
+    src: url('https://images.hindawi.com/fonts/xits-math.eot');
+    src: url('https://images.hindawi.com/fonts/xits-math.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body {
+	background-color:#FFFFFF;
+	text-align:center;
+	margin: 0px;
+	font-family: 'Minion W08 Regular_1167271',Times;
+	font-size: 17px;
+	line-height:20px;
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+body {
+	margin: 12px 6px;
+}
+math {
+	background-color:#FFFFFF;
+	text-align:center;
+	font-family: 'Minion W08 Regular_1167271',Times;
+	font-size: 17px;
+	line-height:20px;
+}
+.table-group, .figure-group, .table-group-caption {
+	text-align:center;
+}
+table .algorithm {
+	margin-right: auto;
+	margin-left: auto;
+	text-align:left;
+	
+}
+.alg-content {
+	display:block;
+	text-align:left;
+}
+.algorithm {
+	border: 1px solid #999999;
+	padding: 10px;
+	
+	margin-bottom: 18px;
+	/* display:block; */
+}
+table.algorithm td {
+	vertical-align: top;
+}
+table.algorithm td span[style="font-family:monospace"], .monospace {
+	font-family: 'xitstexttt', Courier, monospace !important; /* to override inline-style */
+}
+span[style="font-family:monospace"] b, .monospace b{
+	font-family: 'xitstextttbf', Courier, monospace !important; /* to override inline-style */
+}
+.sansierf, .sans-serif {
+	font-family: 'xitstextsf', sans-serif !important; /* to override inline-style */
+}
+/*  new css for tables without thead, th & tbody 10-28-2008 */
+table tr td {
+	padding: 0;
+}
+.table-group .table-group-caption td {
+	padding: 0 6px 6px 0;
+}
+.table-group .table-fn td {
+	padding: 6px 6px 0 0;
+}
+
+th[style="padding-left: 0pt;"] {
+	border: 5.5pt transparent;
+	border-style: none none none solid;
+}
+/* For new tables with thead, th & tbody 10-28-2008 */
+.thead {
+/*font-family: 'Minion W08 Bold';font-weight:normal;*/
+}
+/* end test */
+.fig-image {
+	text-align:center
+}
+.fig-image img {
+	max-width:100%;
+}
+table {
+	margin-right: auto;
+	margin-left: auto;
+}
+.table-group, .figure-group, .algorithm-group {
+	margin: 24px auto 24px;
+	text-align:center;
+	
+	max-width: 1012px;
+	width: auto;
+	padding: 0 6px;
+}
+.table .thead th {
+	padding: 0em 1.5em;
+	color: #000000;
+}
+.table td {
+	padding:4px 7px;
+}
+.thead-hr {
+	width: 100%;
+}
+.border_img {
+	margin-right: auto;
+	margin-left: auto;
+}
+.table-group hr {
+	padding: 0;
+	margin: 2px 0;
+	height: 1px;
+	border: 0px;
+	background-color: #999999;
+}
+.fig-group-caption, .table-group-caption, .table-fn {
+	width: 100%;
+	text-align:justify;
+}
+.table-group.fixed-width, 
+.table-group.sidewaystable {
+    max-width: none;
+    min-width: 1000px;
+}
+.table-group.fixed-width .table-group-caption td, 
+.table-group.fixed-width .table-fn td,
+.table-group.sidewaystable .table-group-caption td, 
+.table-group.sidewaystable .table-fn td {
+    max-width: 1px;
+    text-align: center;
+}
+.table-group.fixed-width .table-group-caption div {
+	margin: 0 auto;
+	display: inline-block;
+	text-align: justify;
+}
+.table-group.fixed-width .table-fn div {
+	text-align: justify;
+}
+a {
+	color: #418B34;
+	text-decoration:none;
+}
+a:hover {
+	background-color: #F0F9EC;
+	text-decoration:underline;
+}
+b {font-family: 'Minion W08 Bold';font-weight:normal}
+i {font-family: 'Minion W08 Italic';font-style: normal;font-weight:normal}
+b i {font-family: 'Minion W08 Bold Italic';font-style: normal;font-weight:normal}
+.displayeq-css {
+	font-family: 'xits-math';
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.displayed-label {
+	font-family: 'xits-math';
+	display:block;	
+}
+.displayeq-css span {
+	font-family: 'xits-math';
+}
+.fig-image object { /* , .table-group object */
+	max-width: 100%;
+}
+.algorithm-title td {
+	max-width: 1012px;
+}
+
+
+/* new for non-nested tables */
+.fig-group-caption td, .algorithm-group .algorithm-title td {
+	text-align:center;
+}
+.fig-group-caption div, .algorithm-group .algorithm-title div {
+	display: inline-block;
+	text-align: justify;
+}
+.fig-group-caption div {
+	margin: 18px auto 0px;
+	max-width: 1012px;
+}
+/* end */
+/* old nested */
+.fig-group-caption table {
+	margin: 0 auto;
+}
+.fig-group-caption table td {
+	text-align: justify;
+}
+/* end */
+
+.table-group .table object, 
+.figure-group .fig-image object {
+    width: -moz-max-content;
+    height: -moz-max-content;
+}
+.fig-caption td {
+	padding: 12px 0 18px 0;
+}
+.fig-caption + .fig-group-caption div {
+	padding: 0;
+	margin: 0;
+}
+u {
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0px;
+}
+
+/* ---  New List CSS --- */
+.list {
+	display: table;
+	margin-top: 0;
+	margin-bottom: 0;
+	position: relative;
+	*left:0px;
+	*display:block;
+	word-break: break-word;
+	width: 100%;
+}
+.list-item {
+	display: table-row;
+	*display:block;
+}
+.list-label {
+ *display:inline-block;
+ display: table-cell;
+ font-family: 'Minion W08 Regular_1167271';
+ font-style: normal;
+ padding-left: 0;
+ padding-right: 6px;
+ vertical-align: baseline;
+ white-space: nowrap;
+ width: 4%;
+}
+.list-content {
+	display: table-cell;
+	position: relative;
+	vertical-align: baseline;
+	*display:inline;
+	padding-bottom: 12px;
+}
+/* ---  End List CSS --- */
+
+.align_right {text-align: right;}
+.align_left {text-align: left;}
+.align_center {text-align: center;}
+.valign_top { vertical-align:top;}
+
+/*******
+Responsive floats
+*******/ 
+@media all and (max-device-width: 768px) {
+	.table-group.fixed-width, 
+	.table-group.sidewaystable {
+		max-width: none;
+		min-width: 100%;
+	}
+}
+
+/* version no. [v.2017.12.20.01.xml_tables.css] 11:50 AM sidewaystable */
+/* version no. [v.2017.05.16.01.xml_tables.css] 10:00 AM */
+/* version no. [v.2017.05.09.01.xml_tables.css] 04:00 PM */
+/* version no. [v.2016.09.20.01.xml_tables.css] 11:18 AM .table-group object for OPS */
+/* version no. [v.2016.09.04.01.xml_tables.css] 03:30 PM b > i */
+/* version no. [v.2016.09.01.01.xml_tables.css] 11:00 AM https fonts */
