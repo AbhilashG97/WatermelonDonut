@@ -24,9 +24,11 @@ The following can be done with the ```plot``` function in ```MATLAB``` -
 1. The ```axis equal``` command allows generating the plot with the same scale factors and the spaces on both axes.
 1. The ```axis square``` command generates a square plot.
 
+:exclamation:**NOTE:** ```plot(X,Y,LineSpec)``` sets the line style, marker symbol, and color.
+
 ### Drawing Multiple Functions on the Same Graph
 
-We can also draw multiple graphs on the same plot.
+We can also draw multiple graphs on the same plot. ````plot(X1,Y1,...,Xn,Yn)``` plots multiple X, Y pairs using the same axes for all lines. ```plot(X1,Y1,LineSpec1,...,Xn,Yn,LineSpecn)``` sets the line style, marker type, and color for each line.
 
 Here is an example - 
 
@@ -36,3 +38,9 @@ y = sin(x);
 g = cos(x);
 plot(x, y, x, g, '.-'), legend('Sin(x)', 'Cos(x)')
 ```
+### Setting Axis Scales
+
+The axis command allows you to set the axis scales. You can provide **minimum** and **maximum** values for ```x``` and ```y``` axes using the axis command in the following way −
+
+```axis ( [xmin xmax ymin ymax] )```
+
