@@ -1,5 +1,6 @@
 %{
-    This code snippet contains information on special arrays.
+    This code snippet contains information on special arrays
+    and a few examples on Matrix Manipulations.
 %}
 
 % creates a matrix of zeros
@@ -32,3 +33,12 @@ Z=[1 54 3 23; 43 5 11 6; 656 7 43 2; 87 4 6 3];
 disp(Z);
 fprintf('Sorting along the first row.\n');
 disp(sort(Z, 1));
+
+% Saveing a matrix to a file
+save sapote.mat Z;
+
+% Saving a file in text format
+save egg_fruit.txt Z -ascii;
+
+% load data from a file 
+file = load('sapote.mat');

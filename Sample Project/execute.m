@@ -1,5 +1,5 @@
 %{
-    Read data, exctract statistical features and 
+    Read data, extract statistical features and 
     plot an output graph
 
     input file is found in /data folder
@@ -11,7 +11,7 @@
 s = load('data/seeg.mat');
 x = s.xx;
 
-original_signal = x(30, :); % A single channel of an original signal
+original_signal = x(30, 1:10800); % A single channel of an original signal
 filtered_signal = highpass(original_signal, (50/(256/2))); % filtered channel
 
 subplot(1,2,1);
