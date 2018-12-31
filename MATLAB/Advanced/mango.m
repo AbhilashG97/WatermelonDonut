@@ -6,16 +6,25 @@
 x = [0:10:100];
 y = x;
 plot(x, y); % graph of y = x;
+xlabel('x-axis');
+ylabel('y-axis');
+title('graph of f(x) = x;');
 
 x = [-100:10:100];
 y = x.^2;
 figure;
 plot(x,y); % graph of y = x^2;
+xlabel('x-axis');
+ylabel('y-axis');
+title('Graph of y = x^2;');
 
 x = [-100:5:100];
 y = x.^3;
 figure;
 plot(x,y); % graph of y = x^3;
+xlabel('x-axis');
+ylabel('y-axis');
+title('graph of y = x^3');
 
 x = [-100:10:100];
 y = log(x);
@@ -61,5 +70,58 @@ legend('f(x)', 'g(x)');
 xlabel('x-axis'), ylabel('y-axis');
 title('Polynomial graphs');
 
+%{
+    Setting scales for the graphs
+%}
+x = [0:0.01:10];
+y = sin(x);
+z = cos(x);
 
+subplot(1, 2, 1);
+plot(x, y);
+grid on;
+xlabel('x-axis');
+ylabel('y-axis');
+axis ([0 10 -1 1]);
+title('Graph of y = sin(x)');
 
+subplot(1, 2, 2);
+plot(x, z);
+grid on;
+xlabel('x-axis');
+ylabel('y-axis');
+axis ([0 10 -1 1]);
+title('Graph of y = cos(x)');
+
+%{
+    Sub-plots
+    graph of sin(x), cos(x), tan(x);
+%}
+
+x = [0:0.01:10];
+y = sin(x);
+z = cos(x);
+w = tan(x);
+
+figure;
+
+subplot(1, 3, 1);
+plot(x, y);
+grid on;
+title('Graph of y = sin(x)');
+xlabel('x-axis');
+ylabel('y-axis');
+
+subplot(1, 3, 2);
+plot(x, z);
+grid on;
+title('Graph of y = cos(x)');
+xlabel('x-axis');
+ylabel('y-axis');
+
+subplot(1, 3, 3);
+plot(x, w);
+grid on;
+title('Graph of y = tan(x)');
+xlabel('x-axis');
+ylabel('y-axis');

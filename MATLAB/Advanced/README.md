@@ -44,3 +44,15 @@ The axis command allows you to set the axis scales. You can provide **minimum** 
 
 ```axis ( [xmin xmax ymin ymax] )```
 
+### Generating Sub-Plots
+
+When we create an array of plots in the same figure, each of these plots is called a subplot. The ``subplot()``` command is used for creating subplots.
+
+Syntax for the command is −
+
+```subplot(m, n, p)```
+
+where, m and n are the number of rows and columns of the plot array and p specifies where to put a particular plot
+
+### Drawing Bar Charts
+
