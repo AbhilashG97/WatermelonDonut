@@ -60,6 +60,47 @@ The matrix operators and array operators are differentiated by the period (```.`
 Concatenate function : ```cat(dim, A1, A2, ...)``` 
 It can also be used to create multi-dimensional arrays.
 
+### Tips and tricks with Arrays
+
+1. If we want to access all the elements in multiple rows, we use the following syntax: 
+
+   ```matlab
+   disp(A([1 3], :));
+   ```
+
+1. If we want to access all the elements of a particular row, we will use the following syntax:
+
+   ```matlab
+   disp(A(:,2);
+   ```   
+
+   :exclamation: We can also use the same trick to modify all the elements of a particular coloumn.
+
+   ```matlab
+   A(:,2) = [10,10: 10,19L 20,40];
+   disp(A);
+   ```
+1. If we want to convert a matrix any dimension to a column vector we can do the following:
+   
+   ```matlab
+   B = A(:);
+   ```
+
+1. We can also concatenate matrices to obtain a new matrix. The syntax for it is as follows:
+
+   Let us assume that we have two matrices ```B``` and ```C```.
+
+   1. Concatinating matrices horizontally
+
+      ```matlab
+      D = [B C];
+      ```
+   1. Concatinating matrices vertically
+
+      ```matlab
+      D = [B; C];
+      ```
+      
 ## String Operations
 
 We can combine strings vertically in either of the following ways −
@@ -100,7 +141,7 @@ Sub-functions are visible only to the primary function and other sub-functions w
 
 Nested functions are defined within the scope of another function and they share access to the containing function's workspace.
 
-``` Matlab
+``` matlab
 function x = A(p1, p2)
 ...
 B(p2)
@@ -128,3 +169,17 @@ e.g ```global variable_name```
 ## Importing Data
 
 The ```importdata``` function allows loading various data files of different formats.
+
+## Saving Data
+
+The ```save``` keyword is used to save data to a file
+
+**Syntax:**
+
+``` matlab
+save watermelon.m dataSource
+```
+
+:exclamation: The above syntax stores data in binary format.
+
+:exclamation: If we want to store the data in text readble format we have to use the ```-ascii``` tag along with it.
