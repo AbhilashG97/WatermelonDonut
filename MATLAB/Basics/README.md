@@ -100,7 +100,27 @@ It can also be used to create multi-dimensional arrays.
       ```matlab
       D = [B; C];
       ```
-      
+   :warning: ```;``` means new-line.
+
+1. **sum()**
+   The ```sum()`` function can also be used to calcaulate the sum of the matrix row-wise or column-wise. 
+   
+   This can be done in the following way - 
+
+   1. ```sum(A, 1)```
+
+      This does the column-wise sum of all the elements present in the matrix.
+
+   1. ```sum(A, 2)```
+
+      This does the row-wise sum of all the elements present in the matrix.
+
+1. Flipping a matrix upside down -
+
+   We can flip a matrix upside down using a command in MATLAB. The command for this is as folows - 
+
+   ```flipud(A)```
+
 ## String Operations
 
 We can combine strings vertically in either of the following ways −
