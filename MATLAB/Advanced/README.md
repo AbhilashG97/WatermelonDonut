@@ -38,6 +38,7 @@ y = sin(x);
 g = cos(x);
 plot(x, y, x, g, '.-'), legend('Sin(x)', 'Cos(x)')
 ```
+
 ### Setting Axis Scales
 
 The axis command allows you to set the axis scales. You can provide **minimum** and **maximum** values for ```x``` and ```y``` axes using the axis command in the following way −
@@ -54,5 +55,69 @@ Syntax for the command is −
 
 where, m and n are the number of rows and columns of the plot array and p specifies where to put a particular plot
 
+### Saving Plots
+
+We can save plots in MATLAB using the print command. 
+
+Here is an example for the same - 
+
+```matlab
+x = [1:2:100]
+y = [1:10]
+
+plot(x, y);
+print -dpng 'watermelonPlot.png'
+```
+
+### Closing plots
+
+We can close plots using the ```close()``` function.
+
+Here is an example of the close command - 
+
+```matlab
+x = [1:10:100]
+y = x;
+plot(x, y);
+close();
+```
+
+### Drawing figures
+
+We can plot graphs in various figures. The ```figure()``` function can be used to create plots in different figures. 
+
+Below is an example for the same - 
+
+```matlab
+figure(1): plot(x, y);
+figure(2): plot(z, w);
+```
+
+### Clearing figures
+
+We can clear figures using the ```clf()``` function. 
+
+Here is an example for the same - 
+
+```matlab
+figure(1): plot(x, y);
+figure(2): plot(x, z);
+```
+
+:warning: If multiple graphs are plotted in figures then the ```clf``` clears the last figure and not all the figures.
+
+### Visualizing a matrices
+
+A matrix can also be visualized as a color specification. It can be done with the following commmand. 
+
+Here is an example - 
+
+```matlab
+imagesc(A), colorbar, colormap gray;
+```
+
+:warning: We can chain commands using commas, and this is knows as comma-chaining. It is used to chain commands.
+
 ### Drawing Bar Charts
+
 
