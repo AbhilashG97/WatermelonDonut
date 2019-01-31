@@ -103,7 +103,7 @@ It can also be used to create multi-dimensional arrays.
    :warning: ```;``` means new-line.
 
 1. **sum()**
-   The ```sum()`` function can also be used to calcaulate the sum of the matrix row-wise or column-wise. 
+   The ```sum()``` function can also be used to calcaulate the sum of the matrix row-wise or column-wise. 
    
    This can be done in the following way - 
 
@@ -115,11 +115,51 @@ It can also be used to create multi-dimensional arrays.
 
       This does the row-wise sum of all the elements present in the matrix.
 
-1. Flipping a matrix upside down -
+1. **flipud()**
 
    We can flip a matrix upside down using a command in MATLAB. The command for this is as folows - 
 
    ```flipud(A)```
+
+1. **size()**
+
+   The ```size()``` function will return the size the matrix. However if we provide another argument it can calculate the size of the rows and columns in a matrix.
+
+   Here is an example for the same - 
+
+   1. ```size(x, 1)```
+
+      This returns the size of the number of rows in a matrix.
+
+   1. ```size(x, 2)```
+
+      This returns the size of the number of columns in a matrix. 
+
+## Loops and Operations 
+
+```MATLAB``` has loops which can be used as when required. There are both ```for``` and ```while``` loops.
+
+Here are examples for the same - 
+
+1. ```while loop```
+   
+   A while loop can be used in the following way - 
+
+   ```matlab
+   while condition,
+      disp('stuff');
+   end;
+   ```
+
+1. ```for loop```
+
+   A ```for``` loop can used in the following way - 
+   
+   ```matlab
+   for index = values
+      statement
+   end
+   ```
 
 ## String Operations
 
@@ -192,7 +232,7 @@ The ```importdata``` function allows loading various data files of different for
 
 ## Saving Data
 
-The ```save``` keyword is used to save data to a file
+The ```save``` keyword is used to save data to a file.
 
 **Syntax:**
 
