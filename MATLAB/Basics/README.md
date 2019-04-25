@@ -100,6 +100,7 @@ It can also be used to create multi-dimensional arrays.
       ```matlab
       D = [B; C];
       ```
+
    :warning: ```;``` means new-line.
 
 1. **sum()**
@@ -160,6 +161,66 @@ Here are examples for the same -
       statement
    end
    ```
+
+### Miscellaneous
+
+1. **length() vs size()**
+
+   ```length()``` returns the size of the longest part of the matrix. If the matrix is a 2x3 matrix the length will be 3, as 3 is the largest.
+
+   ```size()``` returns the full dimension of a given matrix.
+
+1. **incrementing all the elements of a matrix**
+
+   We can do the following to increment all the elements of a matrix.
+
+   ```matlab
+   A + 1;
+   ```
+
+   We can also use the ```ones()``` function to increment the required elements.
+
+   ```matlab
+   A + ones(length(A),1);
+   ```
+
+1. **Comparision operations on matrices**
+
+   We can also find out if the elements of a matrix are greater than or less than a specified value.
+
+   The syntax for that is as follows: 
+
+   ```matlab 
+   A < 3
+   ```
+
+   This will output 1's and 0's. Where 1's indicate those indicies which satisfies a given condition and 0's indicate those indicies that don't satisfy a condition.
+
+   :warning: We can also use the ```find()``` along with this to find the elements satisfying the given condition. 
+
+1. **Finding max()**
+
+   The ```max()``` function can be used to find the maximum in an array. We can also use the ```max()``` function to find the index at which the max funtion is located. 
+
+   ```matlab
+   [value, index] = max(A);
+
+   disp(max(A));
+   ``` 
+
+   :warning: We can also find the max of element present in all of the columns or the max element in present in all the rows.
+
+      The syntax for this is as follows:
+
+      **Max in columns**
+      ```matlab
+      Q = max(A, [], 1);
+      ```
+
+      **Max in rows**
+      ```matlab
+      R = max(A, [], 2);
+      ```
 
 ## String Operations
 
